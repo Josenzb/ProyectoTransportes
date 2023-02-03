@@ -1,6 +1,7 @@
 package co.com.sofka.Transportes.repository.models;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Viaje {
@@ -9,12 +10,15 @@ public class Viaje {
     private String hora;
     private Destinos destino;
     private Buses bus;
+    private List<Pasajeros> pasajeros;
+
 
     public Viaje(long id, String hora, Destinos destino, Buses bus) {
         this.id = id;
         this.hora = hora;
         this.destino = destino;
         this.bus = bus;
+        this.pasajeros = new ArrayList<>();
     }
 
     public long getId() {
@@ -47,5 +51,13 @@ public class Viaje {
 
     public void setBus(Buses bus) {
         this.bus = bus;
+    }
+
+    public List<Pasajeros> getPasajeros() {
+        return pasajeros;
+    }
+
+    public void setPasajeros(List<Pasajeros> pasajeros) {
+        this.pasajeros = pasajeros;
     }
 }

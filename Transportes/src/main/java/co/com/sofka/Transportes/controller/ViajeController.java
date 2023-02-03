@@ -22,6 +22,11 @@ public class ViajeController {
         return service.findAll();
     }
 
+    @PutMapping("/{viajeId}/pasajeros")
+    public Viaje addPassengers(@PathVariable long viajeId, @RequestBody List<Long> pasajerosId) {
+        return service.addPassengers(viajeId, pasajerosId);
+    }
+
 }
 
 
