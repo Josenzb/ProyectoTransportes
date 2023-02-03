@@ -1,35 +1,35 @@
 package co.com.sofka.Transportes.repository.models;
 
-import java.time.LocalTime;
+
 import java.util.List;
 
 public class Viaje {
 
-    private int id;
-    private LocalTime hora;
+    private long id;
+    private String hora;
     private Destinos destino;
     private Buses bus;
 
-    public Viaje(int id, LocalTime hora, Destinos destino, Buses bus) {
+    public Viaje(long id, String hora, Destinos destino, Buses bus) {
         this.id = id;
         this.hora = hora;
         this.destino = destino;
         this.bus = bus;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public LocalTime getHora() {
+    public String getHora() {
         return hora;
     }
 
-    public void setHora(LocalTime hora) {
+    public void setHora(String hora) {
         this.hora = hora;
     }
 

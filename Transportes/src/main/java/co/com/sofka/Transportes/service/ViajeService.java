@@ -7,7 +7,7 @@ import co.com.sofka.Transportes.repository.models.Destinos;
 import co.com.sofka.Transportes.repository.models.Pasajeros;
 import co.com.sofka.Transportes.repository.models.Viaje;
 
-import java.time.LocalTime;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,10 +16,10 @@ public class ViajeService {
     DestinoRepository destinoRepository = new DestinoRepository();
     BusesRepository busesRepository = new BusesRepository();
 
-    public Viaje create(LocalTime hora, long destinoId, long busId) {
+    public Viaje create(String hora, long destinoId, long busId) {
         Destinos destino = destinoRepository.getDestinoById(destinoId);
         Buses bus = busesRepository.getBusById(busId);
-        int id = viajes.size() + 1;
+        long id = viajes.size() + 1;
         Viaje viaje = new Viaje(id, hora, destino, bus);
         viajes.add(viaje);
         return viaje;

@@ -13,7 +13,7 @@ public class ViajeController {
     private ViajeService service = new ViajeService();
 
     @PostMapping("/destinoId/{destinoId}/busId/{busId}")
-    public Viaje create(@RequestBody LocalTime hora, @PathVariable long destinoId, @PathVariable long busId) {
+    public Viaje create(@RequestBody String hora, @PathVariable long destinoId, @PathVariable long busId) {
         return service.create(hora, destinoId, busId);
     }
 
